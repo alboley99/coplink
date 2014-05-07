@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"
+    xmlns:customNS="http://access.auth.theplatform.com/data/Account/2440346285"
+    xmlns:plingestm="http://xml.theplatform.com/ingest/data/IngestMedia">
+    <channel>
+        <item>
+            <title>BWV 0234566</title>
+            <media:content url="ftp://ftp.6xw.co/videoingest/media.mov" />
+            <PCNumber>4765453</PCNumber>
+            <incidentLogDetails>This is an incident</incidentLogDetails>
+            <location>No location provided</location>
+            
+            
+            <!-- Create the console preview -->
+            <plingestm:workflowOption>
+                <plingestm:service>publish</plingestm:service>
+                <plingestm:method>auto-detect</plingestm:method>
+                <plingestm:argument>
+                    <!-- This example specifies a publish profile by title for the first publish operation -->
+                    <plingestm:key>profile</plingestm:key>
+                    <plingestm:value>Create preview for Console</plingestm:value>
+                </plingestm:argument>
+            </plingestm:workflowOption>
+            
+            <!-- Create the public video -->
+            <plingestm:workflowOption>
+                <plingestm:service>publish</plingestm:service>
+                <plingestm:method>auto-detect</plingestm:method>
+                <plingestm:argument>
+                    <!-- This example specifies a publish profile by title for the first publish operation -->
+                    <plingestm:key>profile</plingestm:key>
+                    <plingestm:value>Publish to Web Devices as HLS/HDS/Progressive - Public</plingestm:value>
+                </plingestm:argument>
+            </plingestm:workflowOption>
+            
+            
+        </item>
+    </channel>
+</rss>
